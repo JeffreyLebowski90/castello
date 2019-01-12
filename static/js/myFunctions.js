@@ -20,7 +20,7 @@ function tadaAnim() {
     x.classList.add("loader");
     x = document.getElementById("trovaInput");
     x.style.color = "black";
-    x.value = "Maglietta Benetton maniche lunghe";
+    x.value = "scarpe adidas basse";
     x.classList.add("animated");
     x.classList.add("tada");
 }
