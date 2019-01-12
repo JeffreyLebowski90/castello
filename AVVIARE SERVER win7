@@ -1,0 +1,4 @@
+cd B:\code\Scripts
+activate
+cd B:\code\CastelloFolder\castello
+python manage.py runserver

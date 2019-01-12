@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/spinner_loader.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Home -->
+<div class="home homeDiv">
+	<div class="home_slider_container homeBackground" style="background-image:url( {% static 'images/home_slider_1.jpg' %});">
+		<div style="text-align: center; bottom: 60px; padding-top: 100px;">
+			<div class="home_slider_title">CASTELLO</div>
+			<div class="home_slider_subtitle">Acquista nella tua città.</div>
+			<div style="margin: 80px auto" id="homeLoader">Loading...</div>
+			{% comment %} <input autofocus id="trovaInput" type="search" class="newsletter_input" required="required" placeholder="Cerca il prodotto . . ."> {% endcomment %}
+			{% comment %} <input autofocus id="trovaInput" type="text" class="form-control" aria-label="Sizing example input"
+				aria-describedby="inputGroup-sizing-default" placeholder="Cerca il prodotto . . ."
+				style="max-width: 400px;"> {% endcomment %}
+			<input autofocus id="trovaInput"  type="text" class="form-control" placeholder="Cerca il prodotto . . ."
+				style="color: black; max-width: 500px; display: inline; text-align: center;" >
+			<br>
+			<div class="button button_light home_button trovaLink" style="display: inline-block;">
+				<a onclick="show()">Trova</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% comment %} CANCELLARE {% endcomment %}
+{% comment %} <div class="form-check">
+	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="show()">
+	<label class="form-check-label" for="exampleRadios2">
+		Yes
+	</label>
+</div>
+<form id="myDIV" style="display: none;">
+	<h1>Test</h1>
+	<br>
+	<div class="form-row">
+		<div class="col-sm">
+			<h3 style="color: black" class="animated fadeInUp">Clarifications</h3>
+		</div>
+		<div class="col-sm">
+			<h3 style="color: black" class="animated fadeInUp">Vendor's Replies</h3>
+		</div>
+	</div>
+</form> {% endcomment %}
+
+<!-- Ads -->
+
+<div class="avds">
+	<div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
+		<div class="avds_small">
+			<div class="avds_background" style="background-image:url( {% static 'images/avds_small.jpg' %})"></div>
+			<div class="avds_small_inner">
+				<div class="avds_discount_container">
+					<img src="{% static 'images/discount.png' %}" alt="">
+					<div>
+						<div class="avds_discount">
+							<div>20<span>%</span></div>
+							<div>Discount</div>
+						</div>
+					</div>
+				</div>
+				<div class="avds_small_content">
+					<div class="avds_title">Smart Phones</div>
+					<div class="avds_link"><a href="{% url 'categories' %}">See More</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="avds_large">
+			<div class="avds_background" style="background-image:url( {% static 'images/avds_large.jpg' %})"></div>
+			<div class="avds_large_container">
+				<div class="avds_large_content">
+					<div class="avds_title">Professional Cameras</div>
+					<div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec
+						molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
+					<div class="avds_link avds_link_large"><a href="{% url 'categories' %}">See More</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Products -->
+
+<div class="products">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+				<div class="product_grid">
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_1.jpg' %}" alt=""></div>
+						<div class="product_extra product_new"><a href="{% url 'categories' %}">New</a></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_2.jpg' %}" alt=""></div>
+						<div class="product_extra product_sale"><a href="{% url 'categories' %}">Sale</a></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_3.jpg' %}" alt=""></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_4.jpg' %}" alt=""></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_5.jpg' %}" alt=""></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_6.jpg' %}" alt=""></div>
+						<div class="product_extra product_hot"><a href="{% url 'categories' %}">Hot</a></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_7.jpg' %}" alt=""></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+					<!-- Product -->
+					<div class="product">
+						<div class="product_image"><img src="{% static 'images/product_8.jpg' %}" alt=""></div>
+						<div class="product_extra product_sale"><a href="{% url 'categories' %}">Hot</a></div>
+						<div class="product_content">
+							<div class="product_title"><a href="{% url 'product' %}">Smart Phone</a></div>
+							<div class="product_price">$670</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Ad -->
+
+<div class="avds_xl">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="avds_xl_container clearfix">
+					<div class="avds_xl_background" style="background-image:url( {% static 'images/avds_xl.jpg' %})"></div>
+					<div class="avds_xl_content">
+						<div class="avds_title">Amazing Devices</div>
+						<div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
+						<div class="avds_link avds_xl_link"><a href="{% url 'categories' %}">See More</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Ad -->
+
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/myFunctions.js' %}"></script>
+
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<!-- Load our React component. -->
+<!-- <script src="{% static 'React/components/IndexForm/IndexForm.js' %}"></script> -->
+{% endblock %}
