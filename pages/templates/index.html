@@ -15,9 +15,9 @@
 <div class="home homeDiv">
 	<div class="home_slider_container homeBackground" style="background-image:url( {% static 'images/home_slider_1.jpg' %});">
 		<div style="text-align: center; bottom: 60px; padding-top: 100px;">
-			<div class="home_slider_title">CASTELLO</div>
-			<div class="home_slider_subtitle">Acquista nella tua città.</div>
-			<div style="margin: 80px auto" id="homeLoader">Loading...</div>
+			<div class="home_slider_title animated rubberBand">CASTELLO</div>
+			<div class="home_slider_subtitle animated fadeIn">Acquista nella tua città.</div>
+			<div style="margin: 80px auto; height: 20px;" id="homeLoader">.</div>
 			{% comment %} <input autofocus id="trovaInput" type="search" class="newsletter_input" required="required" placeholder="Cerca il prodotto . . ."> {% endcomment %}
 			{% comment %} <input autofocus id="trovaInput" type="text" class="form-control" aria-label="Sizing example input"
 				aria-describedby="inputGroup-sizing-default" placeholder="Cerca il prodotto . . ."
@@ -25,7 +25,7 @@
 			<input autofocus id="trovaInput"  type="text" class="form-control" placeholder="Cerca il prodotto . . ."
 				style="color: black; max-width: 500px; display: inline; text-align: center;" >
 			<br>
-			<div class="button button_light home_button trovaLink" style="display: inline-block;">
+			<div class="button button_light home_button trovaLink" style="display: inline-block; bottom: 0px;">
 				<a onclick="show()">Trova</a>
 			</div>
 		</div>
