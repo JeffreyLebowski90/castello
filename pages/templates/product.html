@@ -31,14 +31,14 @@
 				<!-- Product Content -->
 				<div class="col-lg-6">
 					<div class="details_content">
-						<div class="details_name">Smart Phone</div>
-						<div class="details_discount">$890</div>
-						<div class="details_price">$670</div>
+						<div class="details_name">adidas Performance</div>
+						<div class="details_discount">€59,99</div>
+						<div class="details_price">€35,99</div>
 
 						<!-- In Stock -->
 						<div class="in_stock_container">
-							<div class="availability">Availability:</div>
-							<span>In Stock</span>
+							<div class="availability">Disponibilità:</div>
+							<span>In Vendita</span>
 						</div>
 						<div class="details_text">
 							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
@@ -47,19 +47,19 @@
 						<!-- Product Quantity -->
 						<div class="product_quantity_container">
 							<div class="product_quantity clearfix">
-								<span>Qty</span>
+								<span>Qt</span>
 								<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
 								<div class="quantity_buttons">
 									<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
 									<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
 								</div>
 							</div>
-							<div class="button cart_button"><a href="#">Add to cart</a></div>
+							<div class="button cart_button"><a href="#">Aggiungi al carrello</a></div>
 						</div>
 
 						<!-- Share -->
 						<div class="details_share">
-							<span>Share:</span>
+							<span>Condividi:</span>
 							<ul>
 								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -74,8 +74,8 @@
 			<div class="row description_row">
 				<div class="col">
 					<div class="description_title_container">
-						<div class="description_title">Description</div>
-						<div class="reviews_title"><a href="#">Reviews <span>(1)</span></a></div>
+						<div class="description_title">Descrizione</div>
+						<div class="reviews_title"><a href="#">Recensioni <span>(1)</span></a></div>
 					</div>
 					<div class="description_text">
 						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
@@ -91,7 +91,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="products_title">Related Products</div>
+					<div class="products_title">Prodotti Simili</div>
 				</div>
 			</div>
 			<div class="row">
@@ -102,38 +102,42 @@
 						<!-- Product -->
 						<div class="product">
 							<div class="product_image"><img src="{% static 'images/product_1.jpg' %}" alt=""></div>
-							<div class="product_extra product_new"><a href="categories.html">New</a></div>
+							<div class="product_extra product_new"><a href="{% url 'categories' %}">New</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Smart Phone</a></div>
-								<div class="product_price">$670</div>
+								<div class="product_title"><a href="/product">adidas Performance</a></div>
+								<div class="product_price" style="font-size: 0.9em">Via Tigellio <i>(4,5 km da te)</i></div>
+								<div class="product_price" style="color:red">83,90 €</div>
 							</div>
 						</div>
-
+						
 						<!-- Product -->
 						<div class="product">
 							<div class="product_image"><img src="{% static 'images/product_2.jpg' %}" alt=""></div>
-							<div class="product_extra product_sale"><a href="categories.html">Sale</a></div>
+							<div class="product_extra product_sale"><a href="{% url 'categories' %}">Sale</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Smart Phone</a></div>
-								<div class="product_price">$520</div>
+								<div class="product_title"><a href="/product">adidas Performance</a></div>
+								<div class="product_price" style="font-size: 0.9em">Via Roma <i>(1 km da te)</i></div>
+								<div class="product_price" style="color:red">58,49 €</div>
 							</div>
 						</div>
-
+						
 						<!-- Product -->
 						<div class="product">
 							<div class="product_image"><img src="{% static 'images/product_3.jpg' %}" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Smart Phone</a></div>
-								<div class="product_price">$710</div>
+								<div class="product_title"><a href="/product">adidas Performance</a></div>
+								<div class="product_price" style="font-size: 0.9em">Viale Monastir <i>(10 km da te)</i></div>
+								<div class="product_price" style="color:red">40,00 €</div>
 							</div>
 						</div>
-
+						
 						<!-- Product -->
 						<div class="product">
 							<div class="product_image"><img src="{% static 'images/product_4.jpg' %}" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Smart Phone</a></div>
-								<div class="product_price">$330</div>
+								<div class="product_title"><a href="/product">adidas Performance</a></div>
+								<div class="product_price" style="font-size: 0.9em">Corso Asia ASSEMINI <i>(8,3 km da te)</i></div>
+								<div class="product_price" style="color:red">43,99 €</div>
 							</div>
 						</div>
 

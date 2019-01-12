@@ -26,13 +26,14 @@
 			{% block content %}
 			{% endblock %}
 
+			<!-- Newsletter -->
+			{% include "components/newsletter.html" %}
+			<!-- Footer -->
+			{% include "components/footer.html" %}
+
 			{% if request.path != '/product' %}
 				<!-- Icon Boxes -->
 				{% include "components/iconBoxes.html" %}
-				<!-- Newsletter -->
-				{% include "components/newsletter.html" %}
-				<!-- Footer -->
-				{% include "components/footer.html" %}
 			{% endif %}
 		</div>
 
