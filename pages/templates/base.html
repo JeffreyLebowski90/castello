@@ -27,14 +27,13 @@
 			{% endblock %}
 
 			<!-- Newsletter -->
-			{% include "components/newsletter.html" %}
-			<!-- Footer -->
-			{% include "components/footer.html" %}
-
 			{% if request.path != '/product' %}
 				<!-- Icon Boxes -->
 				{% include "components/iconBoxes.html" %}
 			{% endif %}
+			{% include "components/newsletter.html" %}
+			<!-- Footer -->
+			{% include "components/footer.html" %}
 		</div>
 
 		<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
