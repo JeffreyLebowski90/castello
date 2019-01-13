@@ -1,7 +1,11 @@
 {% load static %}
 
 <div class="product">
-    <div class="product_image"><img src="{% static 'images/product_1.jpg' %}" alt=""></div>
+    <div class="product_image">
+        <img src="{% static 'images/product_1.jpg' %}" alt="">
+        <button class="btn btn-outline-info btn-sm" style="position:absolute; bottom: 0%; right: 0%">
+            vedi mappa</button>
+    </div>
     <div class="product_extra product_new"><a href="{% url 'categories' %}">New</a></div>
     <div class="product_content">
         <div class="product_title"><a href="/product">adidas Performance</a></div>
