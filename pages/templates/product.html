@@ -5,6 +5,9 @@
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'styles/product.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/product_responsive.css' %}">
+<!-- MAPS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
 {% endblock %}
 
 {% block content %}
@@ -80,6 +83,7 @@
 					<div class="description_text">
 						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
 					</div>
+					<div id='map' style='width: 100%; height: 400px; margin-top: 50px;' ></div>
 				</div>
 			</div>
 		</div>
@@ -87,7 +91,7 @@
 
 	<!-- Products -->
 
-	<div class="products">
+	<div class="products" style=" z-index: 3">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
@@ -108,5 +112,19 @@
 {% endblock %}
 
 {% block js %}
+<script>
+    var lngLat = [9.110, 39.215]
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZnJleWxlYm93c2tpOTAiLCJhIjoiY2pxdXE0MzNnMGxlMzN4bjBycmZjMWw4OCJ9.BZrqyavzNry4ejuDEcgrNQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v10',
+        center: lngLat,
+        zoom: 13.5
+        });
+    var marker = new mapboxgl.Marker()
+        .setLngLat(lngLat)
+        .addTo(map);
+</script>
+{% include './components/mapScripts.html'%}	
 <script src="{% static 'js/product.js' %}"></script>
 {% endblock %}
