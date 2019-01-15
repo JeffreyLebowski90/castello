@@ -67,21 +67,11 @@
 		</div>
 	</div>
 
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZnJleWxlYm93c2tpOTAiLCJhIjoiY2pxdXE0MzNnMGxlMzN4bjBycmZjMWw4OCJ9.BZrqyavzNry4ejuDEcgrNQ';
-	var map = new mapboxgl.Map({
-		container: 'map',
-		style: 'mapbox://styles/mapbox/streets-v10',
-		center: [9.12, 39.22],
-		zoom: 12.8
-		});
-	var marker = new mapboxgl.Marker()
-		.setLngLat([9.12, 39.22])
-		.addTo(map);
-</script>
+
 	
 {% endblock %}
 
 {% block js %}
+{% include './components/mapScripts.html'%}
 <script src="{% static 'js/categories.js' %}"></script>
 {% endblock %}
