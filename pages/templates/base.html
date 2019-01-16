@@ -27,11 +27,13 @@
 			{% endblock %}
 
 			<!-- Newsletter -->
-			{% if request.path != '/product' %}
+			{% if request.path != '/product' and request.path != '/cart' %}
 				<!-- Icon Boxes -->
 				{% include "components/iconBoxes.html" %}
 			{% endif %}
-			{% include "components/newsletter.html" %}
+			{% if request.path != '/cart' %}
+				{% include "components/newsletter.html" %}
+			{% endif %}
 			<!-- Footer -->
 			{% include "components/footer.html" %}
 		</div>

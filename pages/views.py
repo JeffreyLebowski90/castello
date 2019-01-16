@@ -13,3 +13,7 @@ def categories(request):
 
 def product(request):
     return render(request, 'product.html')
+
+
+def cart(request):
+    return render(request, 'cart.html')
