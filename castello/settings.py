@@ -25,7 +25,8 @@ SECRET_KEY = '!p93^6e*&k+vp6n2#_m*zdahlwx)l1lcs-ezlxvtt74sh($sc#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Per deployment
+ALLOWED_HOSTS = ['castelloapp.pythonanywhere.com'] 
 
 
 # Application definition
@@ -122,3 +123,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# Per deployment
+STATIC_ROOT = '/home/castelloapp/castello/static/'
