@@ -26,7 +26,9 @@ SECRET_KEY = '!p93^6e*&k+vp6n2#_m*zdahlwx)l1lcs-ezlxvtt74sh($sc#'
 DEBUG = True
 
 # Per deployment
-ALLOWED_HOSTS = ['castelloapp.pythonanywhere.com'] 
+ALLOWED_HOSTS = [
+    'castelloapp.pythonanywhere.com'
+] 
 
 
 # Application definition

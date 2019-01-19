@@ -8,6 +8,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Sublime project">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- AGGIUNTO PER SPINNER -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
 	<link rel="stylesheet" type="text/css" href="static/styles/bootstrap4/bootstrap.min.css">
 	<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
@@ -17,26 +21,36 @@
 	{% endblock %}
 	</head>
 	<body>
-		<div class="super_container">
-			<!-- Header -->
-			{% include "components/header.html" %}
-			<!-- Menu -->
-			{% include "components/menu.html" %}  
+		{% if device_info.type != 'phone' %}
+			<div class="super_container">
+				<!-- Header -->
+				{% include "components/header.html" %}
+				<!-- Menu -->
+				{% include "components/menu.html" %}  
 
-			{% block content %}
-			{% endblock %}
+				{% block content %}
+				{% endblock %}
 
-			<!-- Newsletter -->
-			{% if request.path != '/product' and request.path != '/cart' %}
-				<!-- Icon Boxes -->
-				{% include "components/iconBoxes.html" %}
-			{% endif %}
-			{% if request.path != '/cart' %}
-				{% include "components/newsletter.html" %}
-			{% endif %}
-			<!-- Footer -->
-			{% include "components/footer.html" %}
-		</div>
+				<!-- Newsletter -->
+				{% if request.path != '/product' and request.path != '/cart' %}
+					<!-- Icon Boxes -->
+					{% include "components/iconBoxes.html" %}
+				{% endif %}
+				{% if request.path != '/cart' %}
+					{% include "components/newsletter.html" %}
+				{% endif %}
+				<!-- Footer -->
+				{% include "components/footer.html" %}
+			</div>
+		{% else %}
+			<div class="super_container">
+				<div class="alert alert-primary" role="alert" style="text-align: center">
+					<div class="spinner-grow" role="status"></div><br><br>						
+					<strong>Castello</strong> versione smartphone sarà presto disponibile !<br/>
+					Per ora puoi accedere da PC.
+				</div>
+			</div>
+		{% endif %}
 
 		<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 		<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
